@@ -1,19 +1,20 @@
-const path =  require('path');
+const path = require("path");
 
 module.exports = {
-    context: path.resolve(__dirname, 'src'),
-    mode: 'development',
-    devtool:  'inline-source-map',
-    // entry:  './src/entry.js',
-    entry: {
-        main: './entry.js',
-        // main: `${__dirname}/src/entry.js`,
-        // main: path.resolve(__dirname, 'src/entry.js'),
-    },
-    output: {
-        iife: true,
-        clean: true, 
-        filename: '[name].js',
-        path: path.resolve(__dirname, 'dist'),
-    }
+  context: path.resolve(__dirname, "src"),
+  mode: "production",
+  devtool: "source-map",
+  /* For development */
+  //   mode: "development",
+  //   devtool: "inline-source-map",
+  //   entry: "./entry.js",
+  entry: {
+    main: "./entry.js",
+  },
+  output: {
+    // iife:false,
+    clean: true,
+    filename: "[name].js",
+    path: path.resolve(__dirname, "dist"),
+  },
 };
