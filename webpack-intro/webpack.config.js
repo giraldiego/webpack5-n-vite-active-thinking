@@ -17,8 +17,13 @@ module.exports = {
     filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
   },
-  watch: true,
+//   watch: true,
   watchOptions: {
-    ignored: ['**/node_modules','**/src/info.js'],
+    ignored: ["**/node_modules"],
+  },
+  devServer: {
+    port: 8080,
+    hot: true,
+    watchFiles:['**/src/backend/*'],
   },
 };
