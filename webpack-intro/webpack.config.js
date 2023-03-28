@@ -17,4 +17,8 @@ module.exports = {
     filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
   },
+  watch: true,
+  watchOptions: {
+    ignored: ['**/node_modules','**/src/info.js'],
+  },
 };
